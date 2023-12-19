@@ -18,13 +18,15 @@ namespace AdjustableWalkSpeed.Patches
 
         public class MovementSpeedModifier
         {
-            public static void Postfix(ref float __result)
+            public static void Postfix(ref float __result, vp_FPSController __instance)
             {
 
-                //get value
-                float val = Main.walkSpeedMultiplier;
+                if (GameManager.GetPlayerManagerComponent().PlayerIsWalking())
+                {
+                    __result *= Main.walkSpeedMultiplier;
+                }
 
-                __result *= val;
+                
                
             }
         }
