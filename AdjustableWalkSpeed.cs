@@ -21,13 +21,13 @@ namespace AdjustableWalkSpeed
             if (Input.mouseScrollDelta.y < 0 && !InterfaceManager.IsOverlayActiveCached())
             {
                 walkSpeedMultiplier -= 0.1f;
-                walkSpeedMultiplier = Mathf.Clamp(walkSpeedMultiplier, 0.3f, 1);
+                walkSpeedMultiplier = Mathf.Clamp(walkSpeedMultiplier, 0.3f, 6);
             }
 
             if (Input.mouseScrollDelta.y > 0 && !InterfaceManager.IsOverlayActiveCached())
             {
                 walkSpeedMultiplier += 0.1f;
-                walkSpeedMultiplier = Mathf.Clamp(walkSpeedMultiplier, 0.3f, 1);
+                walkSpeedMultiplier = Mathf.Clamp(walkSpeedMultiplier, 0.3f, 6);
 
             }
 
